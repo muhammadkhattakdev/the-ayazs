@@ -18,7 +18,7 @@ export default function Header() {
             <header>
                 <div className="left-svgs">
                     <img src={linesSVG} alt="" className="lines-svg" />
-                    <img src={circlesSVG} alt="" />
+                    <img className="two-circle-svg" src={circlesSVG} alt="" />
                 </div>
                 <div className="center">
                     <div className="logo">

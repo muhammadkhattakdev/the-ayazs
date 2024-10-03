@@ -8,6 +8,10 @@
     src: url(./fonts/avenir.ttf);
 }
 
+* {
+    scroll-behavior: smooth !important;
+}
+
 :root {
     --primary-color: #FF5E40;
     --secondary-color: #f7cb16;
@@ -19,6 +23,7 @@
     padding: 0;
     font-family: "Nohemi";
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -30,6 +35,7 @@ body::-webkit-scrollbar {
 }
 
 .home-wrapper {
+    scroll-behavior: smooth;
     background-color: var(--primary-color);
     width: 100%;
     overflow-x: hidden;
@@ -84,7 +90,55 @@ body::-webkit-scrollbar {
     left: 590px;
     top: 215px;
     transform: rotate(9deg);
+    animation: CirlceMoving linear alternate 10s infinite ;
+    
 }
+
+@keyframes CirlceMoving {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    10% {
+        transform: translate(0%, -80px);
+    }
+    20% {
+        transform: translate(-150px, -80px);
+    }
+    30% {
+        transform: translate(-150px, 43px);
+    }
+    40% {
+        transform: translate(-190px, 43px);
+    }
+    50% {
+        transform: translate(-190px, -43px);
+    }
+    60% {
+        transform: translate(-590px, -43px);
+        z-index: 1;
+    }
+    61% {
+        z-index:  -10;
+        transform: translate(110vw, 600px);
+    }
+    70% {
+        z-index: 1;
+        transform: translate(1000px, 600px);
+    }
+    80% {
+        z-index: 1;
+        transform: translate(900px, 600px);
+    }
+    90% {
+        z-index: 1;
+        transform: translate(900px, 400px);
+    }
+    100% {
+        z-index:  -10;
+        transform: translate(110vw, 600px);
+    }
+}
+
 
 .home-wrapper header .scroll-arrow-svg {
     display: flex;
@@ -312,10 +366,586 @@ body::-webkit-scrollbar {
     }
 }
 
+
+
+
+/* SECOND SECTION STYLING STARTS HERE */
+
+.home-wrapper .about-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 2px solid var(--secondary-color);
+    margin-top: 200px;
+}
+
+.home-wrapper .about-wrapper .background-lines-img {
+    display: none;
+}
+
+.home-wrapper .about-wrapper .center-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 413px;
+    justify-content: space-between;
+    position: relative;
+    top: -100px;
+}
+
+.home-wrapper .about-wrapper .center-text .small-center-text {
+    font-size: 37.08px;
+    color: var(--white-color);
+    font-family: 'Nohemi';
+}
+
+.home-wrapper .about-wrapper .center-text .name-center-text {
+    color: var(--secondary-color);
+    font-size: 97.72px;
+}
+
+
+  
+.d-center-text {
+    display: inline-block;
+    white-space: nowrap;
+    color: var(--white-color);
+    text-align: center;
+    color: var(--white-color);
+    font-size: 97.72px;
+  }
+.home-wrapper .about-wrapper .specs {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-wrapper .about-wrapper .specs .center-spec {
+    color: var(--white-color);
+    font-size: 28px;
+    font-family: "Avenir";
+    text-align: center;
+}
+
+.home-wrapper .about-wrapper .border-bottom-element {
+    padding: 70px 0px;
+    border: 1px solid var(--secondary-color);
+}
+
+.home-wrapper .about-wrapper .specs .bordered-element {
+    height: 150px;
+    border: 1.4px solid var(--secondary-color);
+}
+
+
+
+
+/* SERVICES SECTION STYLING STARTS HERE  */
+
+.home-wrapper .services-wrapper {
+    width: 100%;    
+}
+
+.home-wrapper .services-wrapper .services-title-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid var(--secondary-color);
+    height: 216px;
+}
+
+.home-wrapper .services-wrapper .services-title-wrapper h1 {
+    font-size: 60px;
+    font-family: 'Nohemi';
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.home-wrapper .services-wrapper .my-services {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services {
+    width: 60%;
+    box-sizing: border-box;
+    margin-left: 150px;
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services .my-service {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    border: 2px solid var(--secondary-color);
+    border-top: none;
+    border-left: none;
+    padding: 40px;
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services .my-service .service-title {
+    color: var(--white-color);
+    font-size: 28px;    
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services .my-service .service-desc {
+    color: var(--white-color);
+    font-size: 18px;
+    font-family: 'Avenir';
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services .my-service .svg {
+    height: 200px;
+    width: 200px;
+}   
+
+.home-wrapper .services-wrapper .my-services .second-column-services {
+    width: 40%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home-wrapper .services-wrapper .my-services .second-column-services .my-service {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    border: 2px solid var(--secondary-color);
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    padding: 72px 72px;
+}
+
+.home-wrapper .services-wrapper .my-services .first-column-services .my-service:last-child{
+    border-bottom: none;
+}
+.home-wrapper .services-wrapper .my-services .second-column-services .my-service:last-child{
+    border-bottom: none;
+}
+
+.home-wrapper .services-wrapper .my-services .second-column-services .my-service .service-title {
+    color: var(--white-color);
+    font-size: 28px;
+}
+
+.home-wrapper .services-wrapper .my-services .second-column-services .my-service .service-desc {
+    color: var(--white-color);
+    font-size: 18px;
+    font-family: 'Avenir';
+}
+
+.home-wrapper .services-wrapper .my-services .second-column-services .my-service .svg {
+    height: 200px;
+    width: 200px;
+}   
+
+
+/* STATS SECTION STYLING STARTS HERE  */
+
+.home-wrapper .stats-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 72px;
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.home-wrapper .stats-wrapper .stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 53px;
+    width: fit-content;
+    align-items: center;
+}
+
+.home-wrapper .stats-wrapper .stat img {
+    width: 214px;
+    height: 115px;
+}
+
+.home-wrapper .stats-wrapper .stat .stat-text {
+    color: var(--white-color);
+    font-size: 36px;
+    font-family: 'Nohemi';
+}
+
+/* OUR WORK SECTION STYLING STARTS HERE  */
+
+.home-wrapper .our-work-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.home-wrapper .our-work-wrapper .top-border-element {
+    height: 240px;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.home-wrapper .our-work-wrapper .work-title {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight:500;
+}
+
+.home-wrapper .our-work-wrapper .work-desc {
+    color: var(--white-color);
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin-top: 32px;
+    margin-bottom: 120px;
+    padding: 0 20%;
+    text-align: center;
+}
+
+.home-wrapper .our-work-wrapper .my-works {
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home-wrapper .our-work-wrapper .my-works * {
+    box-sizing: border-box;
+}
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample {
+    position: relative;
+    width: 100%;
+    height: 540px;
+}
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample .work-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample .logo {
+    width: 150px;
+    height: 77px;
+    z-index: 3;
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+}
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample-2 {
+    position: relative;
+    width: 50%;  
+    height: 540px;
+
+} 
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .work-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .logo {
+    width: 150px;
+    height: 77px;
+    z-index: 3;
+    position: absolute;
+    right: 80px;
+    bottom: 70px;
+}
+
+
+/* TESTIMONIALS SECTION STYLING STARTS HERE  */
+
+.home-wrapper .testimonials-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 120px;
+    border-bottom: 2px solid var(--secondary-color);
+
+}
+
+.home-wrapper .testimonials-wrapper .top-border-element {
+    height: 240px;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.home-wrapper .testimonials-wrapper .testimonials-title {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight:500;
+}
+
+.home-wrapper .testimonials-wrapper .testimonials-desc {
+    color: var(--white-color);
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin-top: 32px;
+    margin-bottom: 72px;
+    padding: 0 20%;
+    text-align: center;
+}
+
+.home-wrapper .testimonials-wrapper .testimonials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial {
+    background-color: #878E88;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    width: 70%;
+    margin-bottom: 66px;
+    position: relative;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial img.comma-img {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    right: 40px;
+    width: 40px;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial img.comma-img-2 {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    right: 90px;
+    width: 40px;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial * {
+    box-sizing: border-box;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial .testimonial-client-img {
+    width: 402px;
+    height: 402px;
+    object-fit: cover;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial .text-area {
+    box-sizing: border-box;
+    padding: 82px 56px;
+    height: 402px;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial .text-area .client-name {
+    color: var(--white-color);
+    font-size: 28px;
+    margin-bottom: 16px;
+    font-family: "Avenir";
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial .text-area .position {
+    color: var(--white-color);
+    font-size: 20px;
+    font-family: "Avenir";
+    margin-bottom: 48px;
+}
+
+.home-wrapper .testimonials-wrapper .client-testimonial .text-area .feedback {
+    color: var(--white-color);
+    font-family: 'Avenir';
+    font-size: 24px;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    width: fit-content;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns .move-btn {
+    width: 163px;
+    background: none;
+    border: none;
+    outline: none;
+    transition: .7s;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns .move-btn.prev-btn img {
+    rotate: 180deg;
+    margin-top: 2px;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns .move-btn:hover {
+    animation: moveBtnAnimation linear 1s forwards;
+    cursor: pointer;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns .move-btn.next-btn:hover {
+    animation: nextBtnAnimation linear .7s forwards;
+    cursor: pointer;
+}
+
+.home-wrapper .testimonials-wrapper .move-btns .move-btn.prev-btn:hover {
+    animation: prevBtnAnimation linear .7s forwards;
+    cursor: pointer;
+}
+
+
+
+@keyframes nextBtnAnimation {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    30% {
+        transform: translate(7%, 0%);
+    }
+    60% {
+        
+        transform: translate(2%, 0%);
+    }
+    100% {
+        transform: translate(7%, 0%);
+    }
+}
+
+@keyframes prevBtnAnimation {
+    0% {
+        transform: translate(0%, 0%);
+    }
+    30% {
+        transform: translate(-7%, 0%);
+    }
+    60% {
+        
+        transform: translate(-2%, 0%);
+    }
+    100% {
+        transform: translate(-7%, 0%);
+    }
+}
+
+.home-wrapper .our-team-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-wrapper .our-team-wrapper .top-border-element {
+    height: 240px;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.home-wrapper .our-team-wrapper .our-team-title {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight:500;
+}
+
+.home-wrapper .our-team-wrapper .our-team-desc {
+    color: var(--white-color);
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin-top: 32px;
+    margin-bottom: 120px;
+    padding: 0 20%;
+    text-align: center;
+}
+
+.home-wrapper .our-team-wrapper .members {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    padding-bottom: 90px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.home-wrapper .our-team-wrapper .member-top-border {
+    border: 1px solid var(--secondary-color);
+    width: 100%;
+}
+
+.home-wrapper .our-team-wrapper .members .member {
+    height: fit-content;
+    display: flex;
+    width: fit-content;
+    gap: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-wrapper .our-team-wrapper .members .member .top-border-element {
+    height: 90px;
+    margin: 0;
+    border: 1px solid var(--secondary-color);
+    width: 0px;
+}
+
+.home-wrapper .our-team-wrapper .members .member img {
+    width: 420px;
+    object-fit: cover;
+}
+
+.home-wrapper .our-team-wrapper .members .member .member-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;
+    width: 100%;
+}
+
+.home-wrapper .our-team-wrapper .members .member .member-text .member-name {
+    color: var(--white-color);
+    font-family: 'Avenir';
+    font-size: 28px;
+}
+
+.home-wrapper .our-team-wrapper .members .member .member-text .member-position {
+    color: var(--white-color);
+    color: var(--secondary-color);
+    font-family: 'Avenir';
+    font-size: 24px;
+    margin-top: 16px;
+}
+
+
+
+
 @media screen and (min-width: 900px) and (max-width: 1600px) {
     .home-wrapper header .center .logo img:nth-child(1) {
         width: 50px;
         height: 60px;
+    }
+    .home-wrapper .about-wrapper .specs .center-spec {
+        width: 700px;
     }
     .home-wrapper header .center .logo img:nth-child(2) {
         width: 300px;
@@ -343,6 +973,65 @@ body::-webkit-scrollbar {
     .home-wrapper header .social-links .social-links-line {
         height: 300px;
     }
+    .home-wrapper .about-wrapper .background-lines-img {
+        width: 1000px;
+    }
+    .home-wrapper .about-wrapper .center-text {
+        height: 300px;
+        top: -70px;
+    }
+    .home-wrapper .about-wrapper .center-text .small-center-text {
+        font-size: 34px;
+    }
+    .home-wrapper .about-wrapper .center-text .name-center-text {
+        font-size: 70px;
+    }
+    .home-wrapper .about-wrapper .center-text .d-center-text {
+        font-size: 70px;
+    }
+    .home-wrapper .stats-wrapper .stat img {
+        width: 154px;
+        height: 80px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample {
+        height: 400px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample .logo {
+        width: 100px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 {
+        height: 400px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .logo {
+        width: 100px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .testimonial-client-img {
+        width: 250px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area {
+        padding: 40px 20px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .position {
+        margin-bottom: 20px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .feedback {
+        font-size: 18px;
+    }
+    .home-wrapper .our-team-wrapper .members .member img {
+        width: 280px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-name {
+        font-size: 24px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-position  {
+        font-size: 19px;
+    }
 }
 
 @media screen and (min-width: 900px) and (max-width: 1258px) {
@@ -356,6 +1045,10 @@ body::-webkit-scrollbar {
     .home-wrapper header .social-links .social-links-line {
         height: 200px;
     }
+    .home-wrapper .about-wrapper .d-center-text {
+        font-size: 20px;
+        text-wrap: wrap;
+    }
     .home-wrapper header .social-links {
         left: 600px;
     }
@@ -365,75 +1058,708 @@ body::-webkit-scrollbar {
     .home-wrapper header .center .logo img:nth-child(2) {
         width: 220px;
     }
+    .home-wrapper .about-wrapper {
+        min-height: 500px;
+    }
+    .home-wrapper header .scroll-arrow-svg {
+        height: 300px;
+    }
+    .home-wrapper header .right-svgs {
+        display: none;
+    }
+    .home-wrapper .about-wrapper .background-lines-img {
+        display: none;
+    }
+    .home-wrapper .about-wrapper .center-text {
+        top: -70px;
+    }
+    .home-wrapper .about-wrapper .center-text .small-center-text {
+        font-size: 24px;
+    }
+    .home-wrapper .about-wrapper .center-text .name-center-text {
+        font-size: 50px;
+    }
+    .home-wrapper .about-wrapper .center-text .d-center-text {
+        font-size: 50px;
+    }
+    .home-wrapper .stats-wrapper {
+        gap: 50px;
+    }
+    .home-wrapper .stats-wrapper .stat {
+        gap: 20px;
+    }
+    .home-wrapper .stats-wrapper .stat img {
+        width: 100px;
+        height: fit-content;
+    }
+    .home-wrapper .stats-wrapper .stat .stat-text {
+        color: var(--white-color);
+        font-size: 22px;
+        font-family: 'Nohemi';
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample {
+        height: 250px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample .logo {
+        width: 60px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 {
+        height: 250px;
+        width: 100%;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .logo {
+        width: 60px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .work-title {
+        color: var(--white-color);
+        font-size: 38px;
+        font-weight:500;
+    }
+    .home-wrapper .our-work-wrapper .work-desc {
+        font-size: 18px;
+    }
+    .home-wrapper .testimonials-wrapper .top-border-element {
+        height: 100px;
+    }
+    .home-wrapper .testimonials-wrapper .testimonials-title {
+        font-size: 30px;
+    }
+    .home-wrapper .testimonials-wrapper .testimonials-desc {
+        font-size: 19px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: fit-content;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area {
+        padding: 20px;
+        height: fit-content;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .position {
+        font-size: 15px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .client-name {
+        font-size: 19px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .feedback {
+        font-size: 19px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .testimonial-client-img {
+        width: 250px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial img.comma-img-2 {
+        display: none;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial img.comma-img {
+        display: none;
+    }
+    .home-wrapper .our-team-wrapper .our-team-desc 
+
+    .home-wrapper .our-team-wrapper .members {
+        justify-content: center;
+        width: 100%;
+    }
+    .home-wrapper .our-team-wrapper .members .member img {
+        width: 170px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-name {
+        font-size: 24px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-position  {
+        font-size: 19px;
+    }
+    .home-wrapper .our-team-wrapper .our-team-title {
+        font-size: 30px;
+    }
+    .home-wrapper .our-team-wrapper .our-team-desc {
+        font-size: 19px;
+        margin-bottom: 30px;
+    }
 }
 
+/* COTACT SECTION STYLING STARTS HERE  */
 
-/* SECOND SECTION STYLING STARTS HERE */
 
-.home-wrapper .about-wrapper {
-    min-height: 1080px;
+.home-wrapper .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.home-wrapper .contact-wrapper .top-border-element {
+    height: 240px;
+    margin: 0;
+    border: 1px solid var(--secondary-color);
+    width: 0px;
+    margin-bottom: 32px;
+}
+
+.home-wrapper .contact-wrapper .contact-title {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight:500;
+}
+
+.home-wrapper .contact-wrapper .contact-desc {
+    color: var(--white-color);
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin-top: 32px;
+    margin-bottom: 72px;
+    padding: 0 20%;
+    text-align: center;
+}
+
+.home-wrapper .contact-wrapper form.contact-form {
+    width:  60%;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 90px;
+}
+
+.home-wrapper .contact-wrapper .contact-input-1 {
     width: 100%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.home-wrapper .about-wrapper .background-lines-img {
-    position: absolute;
-}
-
-.home-wrapper .about-wrapper .center-text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 413px;
-    justify-content: space-between;
-    position: relative;
-    top: -100px;
-}
-
-.home-wrapper .about-wrapper .center-text .small-center-text {
-    font-size: 37.08px;
+    font-size: 18px;
+    font-family: 'Avenir';
     color: var(--white-color);
-    font-family: 'Nohemi';
+    padding: 16px 24px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    border: 2px solid var(--white-color);
+    background:none;    
 }
 
-.home-wrapper .about-wrapper .center-text .name-center-text {
-    color: var(--secondary-color);
-    font-size: 97.72px;
-}
-
-.home-wrapper .about-wrapper .center-text .d-center-text {
+.home-wrapper .contact-wrapper .contact-input-1::placeholder {
     color: var(--white-color);
-    font-size: 97.72px;
+}
+
+.home-wrapper .contact-wrapper form.contact-form .contact-btn {
+    color: var(--white-color);
+    border: none;
+    outline: none;
+    font-size: 18px;
+    width: 100%;
+    border: 2px solid var(--secondary-color);
+    padding: 16px 0;
+    background:none;
+    font-family: 'Avenir';
+    cursor: pointer;
+    transition: .3s;
+}
+
+.home-wrapper .contact-wrapper form.contact-form .contact-btn:hover {
+    color: var(--primary-color);
+    border: 2px solid var(--white-color);
+    background-color: var(--white-color);
+}
+
+/* FAQS STYLING SECTION STARTS HERE  */
+
+.home-wrapper .faqs-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-wrapper .faqs-wrapper .top-border-element {
+    height: 240px;
+    border: 1px solid var(--secondary-color);
+    margin-bottom: 32px;
+}
+
+.home-wrapper .faqs-wrapper .faqs-title {
+    color: var(--white-color);
+    font-size: 60px;
+    font-weight:500;
+}
+
+.home-wrapper .faqs-wrapper .faqs-desc {
+    color: var(--white-color);
+    font-size: 24px;
+    font-family: 'Avenir';
+    margin-top: 32px;
+    margin-bottom: 120px;
+    padding: 0 20%;
     text-align: center;
 }
 
-.home-wrapper .about-wrapper .specs {
+.home-wrapper .faqs-wrapper .qs {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
-    justify-content: space-between;
-    position: absolute;
-    top:70%;
-    gap: 20px;
-    align-items: center;
+    width: 60%;
+    gap: 36px;
+    margin-bottom: 90px;
 }
 
-.home-wrapper .about-wrapper .specs .center-spec {
+.home-wrapper .faqs-wrapper .qs .faq {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 32px 24px;
     color: var(--white-color);
+    border-bottom: 2px solid var(--secondary-color);
+    align-items: center;
+    cursor: pointer;
+}
+
+.home-wrapper .faqs-wrapper .qs .faq .text {
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Avenir';
+}
+.home-wrapper .faqs-wrapper .qs .answer {
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--white-color);
+    font-family: 'Avenir';
+}
+
+.home-wrapper .faqs-wrapper .qs .faq .expand-sign {
+    font-family: 'Avenir';
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (min-width: 900px) and (max-width: 1600px) {
+    .home-wrapper header .center .logo img:nth-child(1) {
+        width: 50px;
+        height: 60px;
+    }
+    .home-wrapper .about-wrapper .specs .center-spec {
+        width: 700px;
+    }
+    .home-wrapper header .center .logo img:nth-child(2) {
+        width: 300px;
+    }
+    .home-wrapper header .left-svgs .lines-svg {
+        position: absolute;
+        width: 650px;
+        top: -50px;
+        left: -100px;
+    }
+    .home-wrapper header .left-svgs img:nth-child(2) {
+        width: 40px;
+        left: 420px;
+        top: 160px;
+    }
+    .home-wrapper header .scroll-arrow-svg {
+        height: 330px;
+    }
+    .home-wrapper header .scroll-arrow-svg img:nth-child(1) {
+        height: 70%;
+    }
+    .home-wrapper header .social-links {
+        left: 1200px;
+    }
+    .home-wrapper header .social-links .social-links-line {
+        height: 300px;
+    }
+    .home-wrapper .about-wrapper .background-lines-img {
+        width: 1000px;
+    }
+    .home-wrapper .about-wrapper .center-text {
+        height: 300px;
+        top: -70px;
+    }
+    .home-wrapper .about-wrapper .center-text .small-center-text {
+        font-size: 34px;
+    }
+    .home-wrapper .about-wrapper .center-text .name-center-text {
+        font-size: 70px;
+    }
+    .home-wrapper .about-wrapper .center-text .d-center-text {
+        font-size: 70px;
+    }
+    .home-wrapper .stats-wrapper .stat img {
+        width: 154px;
+        height: 80px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample {
+        height: 400px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample .logo {
+        width: 100px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 {
+        height: 400px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .logo {
+        width: 100px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .testimonial-client-img {
+        width: 250px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area {
+        padding: 40px 20px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .position {
+        margin-bottom: 20px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .feedback {
+        font-size: 18px;
+    }
+    .home-wrapper .our-team-wrapper .members .member img {
+        width: 280px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-name {
+        font-size: 24px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-position  {
+        font-size: 19px;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1258px) {
+    .home-wrapper header .social-links {
+        left: 900px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .home-wrapper header .social-links .social-links-line {
+        height: 200px;
+    }
+    .home-wrapper .about-wrapper .border-bottom-element {
+        padding: 25px 0;
+    }
+    .home-wrapper .about-wrapper .specs .bordered-element {
+        height: 50px;
+    }
+    .home-wrapper .about-wrapper .specs .center-spec {
+        font-size: 15px;
+    }
+    .home-wrapper .about-wrapper .d-center-text {
+        font-size: 20px;
+        text-wrap: wrap;
+    }
+    .home-wrapper header .social-links {
+        left: 600px;
+    }
+    .home-wrapper header .left-svgs {
+        display: none;
+    }
+    .home-wrapper header .center .logo img:nth-child(2) {
+        width: 220px;
+    }
+    .home-wrapper .about-wrapper {
+        min-height: 500px;
+    }
+    .home-wrapper header .scroll-arrow-svg {
+        height: 300px;
+    }
+    .home-wrapper header .right-svgs {
+        display: none;
+    }
+    .home-wrapper .about-wrapper .background-lines-img {
+        display: none;
+    }
+    .home-wrapper .about-wrapper .center-text {
+        height: 260px;
+        top: -70px;
+    }
+    .home-wrapper .about-wrapper .center-text .small-center-text {
+        font-size: 24px;
+    }
+    .home-wrapper .about-wrapper .center-text .name-center-text {
+        font-size: 50px;
+    }
+    .home-wrapper .about-wrapper .center-text .d-center-text {
+        font-size: 50px;
+    }
+    .home-wrapper .stats-wrapper {
+        gap: 50px;
+    }
+    .home-wrapper .stats-wrapper .stat {
+        gap: 20px;
+    }
+    .home-wrapper .stats-wrapper .stat img {
+        width: 100px;
+        height: fit-content;
+    }
+    .home-wrapper .stats-wrapper .stat .stat-text {
+        color: var(--white-color);
+        font-size: 22px;
+        font-family: 'Nohemi';
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample {
+        height: 250px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample .logo {
+        width: 60px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 {
+        height: 250px;
+        width: 100%;
+    }
+    .home-wrapper .our-work-wrapper .my-works .my-work-sample-2 .logo {
+        width: 60px;
+        right: 50px;
+        bottom: 27px;
+    }
+    .home-wrapper .our-work-wrapper .work-title {
+        color: var(--white-color);
+        font-size: 38px;
+        font-weight:500;
+    }
+    .home-wrapper .our-work-wrapper .work-desc {
+        font-size: 15px;
+    }
+    .home-wrapper .testimonials-wrapper .top-border-element {
+        height: 100px;
+    }
+    .home-wrapper .testimonials-wrapper .testimonials-title {
+        font-size: 30px;
+    }
+    .home-wrapper .testimonials-wrapper .testimonials-desc {
+        font-size: 15px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        height: fit-content;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area {
+        padding: 20px;
+        height: fit-content;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .position {
+        font-size: 15px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .client-name {
+        font-size: 19px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .text-area .feedback {
+        font-size: 19px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial .testimonial-client-img {
+        width: 250px;
+        height: 250px;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial img.comma-img-2 {
+        display: none;
+    }
+    .home-wrapper .testimonials-wrapper .client-testimonial img.comma-img {
+        display: none;
+    }
+    .home-wrapper .our-team-wrapper .our-team-desc {
+        font-size: 15px;
+    }
+
+    
+    .home-wrapper .our-team-wrapper .top-border-element {
+        height: 50px;
+    }
+    .home-wrapper .our-team-wrapper .members {
+        justify-content: center;
+        width: 100%;
+    }
+    .home-wrapper .our-team-wrapper .members .member img {
+        width: 170px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-name {
+        font-size: 24px;
+    }
+    .home-wrapper .our-team-wrapper .members .member .member-text .member-position  {
+        font-size: 19px;
+    }
+    .home-wrapper .our-team-wrapper .our-team-title {
+        font-size: 30px;
+    }
+    .home-wrapper .our-team-wrapper .our-team-desc {
+        margin-bottom: 30px;
+    }
+    .home-wrapper .contact-wrapper form.contact-form {
+        width: 92%;
+        gap: 18px;
+    }
+    .home-wrapper .contact-wrapper .contact-title {
+        font-size: 30px;
+    }
+    .home-wrapper .contact-wrapper .contact-desc {
+        font-size: 15px;
+    }
+    .home-wrapper .contact-wrapper .contact-input-1 {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .home-wrapper .contact-wrapper form.contact-form .contact-btn {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .home-wrapper .contact-wrapper .top-border-element {
+        height: 50px;
+    }
+    .home-wrapper .testimonials-wrapper .top-border-element {
+        height: 50px;
+    }
+    .home-wrapper .faqs-wrapper .top-border-element{
+        height: 50px;
+        margin-bottom: 20px;
+    }
+    .home-wrapper .faqs-wrapper .faqs-title {
+        color: var(--white-color);
+        font-size: 30px;
+    }
+    .home-wrapper .faqs-wrapper .faqs-desc {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+    .home-wrapper .faqs-wrapper .qs .faq {
+        padding: 10px;
+    }
+    .home-wrapper .faqs-wrapper .qs .faq .text {
+        font-size: 16px;
+    }
+    .home-wrapper .faqs-wrapper .qs .answer  {
+        font-size: 16px;
+    }
+    .home-wrapper .services-wrapper .services-title-wrapper {
+        height: 90px;
+    }
+    .home-wrapper .services-wrapper .services-title-wrapper h1 {
+        font-size: 30px;
+    }
+    .home-wrapper .services-wrapper .my-services {
+        flex-wrap: wrap;
+    }
+    .home-wrapper .services-wrapper .my-services .first-column-services {
+        margin-left: 50px;
+        box-sizing: border-box;
+        width: 90%;
+    }
+    .home-wrapper .services-wrapper .my-services .first-column-services .my-service {
+        gap: 13px;
+        border: none;
+    }
+    
+    .home-wrapper .services-wrapper .my-services .second-column-services {
+        width: 90%;
+        box-sizing: border-box;
+        margin-left: 50px;
+    }
+    .home-wrapper .services-wrapper .my-services .second-column-services .my-service {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        border: none;
+        border-top: none;
+        border-left: none;
+        padding: 40px;
+}
+}
+
+
+/* FOOTER SECTION STYLING STARTS HERE */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 120px;
+    background-color: #878E88;
+    color: var(--white-color);
+}
+
+footer .con {
+    font-family: 'Avenir';
+    font-size: 24px;
+}
+
+footer .con:nth-child(1) {
+    margin-bottom: 16px;
+}
+footer .con:nth-child(2) {
+    margin-bottom: 16px;
+}
+footer .con:nth-child(3) {
+    margin-bottom: 48px;
+}
+
+footer .con:nth-child(4) {
+    text-decoration: none;
+    font-family: 'Avenir';  
+    color: var(--white-color);    
+}
+
+footer .con:nth-child(4):hover {
+    text-decoration: underline;
+}
+
+footer .con:nth-child(5) {
+    margin-top: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+footer .con:nth-child(5) a {
+    color: var(--white-color);
+}
+
+footer .con .social-icon {
     font-size: 28px;
-    font-family: "Avenir";
-    width: 700px;
-    text-align: center;
+    transition: .3s;
+    border-radius: 50%;
+    background: none;
 }
 
-.home-wrapper .about-wrapper .specs .bordered-element {
-    height: 350px;
-    border: 1.4px solid var(--secondary-color);
+footer .con .social-icon:hover {
+    font-size: 28px;
+    scale: 1.1;
+    transform: translate(10%, -10%);
+    box-shadow: -5px 5px 10px rgba(247, 208, 208, 0.449);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

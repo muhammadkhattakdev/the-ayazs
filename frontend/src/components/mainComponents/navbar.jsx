@@ -12,41 +12,49 @@ export default function Navbar() {
                     <div className="text">
                         1
                     </div>
-                    <Link className="animated-btn">
+                    <a href="#about" className="animated-btn">
                         About
-                    </Link>
+                    </a>
                 </div>
                 <div className="link-1">
                     <div className="text">
                         2
                     </div>
-                    <Link className="animated-btn">
-                        Work
-                    </Link>
+                    <a href="#services" className="animated-btn">
+                        Services
+                    </a>
                 </div>
                 <div className="link-1">
                     <div className="text">
                         3
                     </div>
-                    <Link className="animated-btn">
-                        Team
-                    </Link>
+                    <a href="#our-work" className="animated-btn">
+                        Work
+                    </a>
                 </div>
                 <div className="link-1">
                     <div className="text">
                         4
                     </div>
-                    <Link className="animated-btn">
-                        Get in touch
-                    </Link>
+                    <a href="#our-team"  className="animated-btn">
+                        Team
+                    </a>
                 </div>
                 <div className="link-1">
                     <div className="text">
                         5
                     </div>
-                    <Link className="animated-btn">
+                    <a href="#contact"  className="animated-btn">
+                        Contact
+                    </a>
+                </div>
+                <div className="link-1">
+                    <div className="text">
+                        6
+                    </div>
+                    <a href="#faqs"  className="animated-btn">
                         FAQs
-                    </Link>
+                    </a>
                 </div>
             </nav>
         </>
